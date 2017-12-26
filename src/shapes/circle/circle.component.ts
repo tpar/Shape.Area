@@ -17,9 +17,6 @@ export class CircleComponent implements OnInit, Shape {
     area: number;
     radius: number;
 
-    rad1: "5";
-    rad2=5;
-
     ngOnInit() {
        this.init(); 
     }
