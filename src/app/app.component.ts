@@ -9,5 +9,6 @@ import { ShapeEnclosure } from '../shapes/shape';
 
 export class AppComponent {
   title = 'app';
-  ecl = new ShapeEnclosure(5, 5);
+
+
 }
