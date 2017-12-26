@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
+
+import { CircleComponent } from '../shapes/circle/circle.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CircleComponent
   ],
   imports: [
     BrowserModule

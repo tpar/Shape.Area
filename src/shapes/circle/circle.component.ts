@@ -1,25 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Shape, ShapeEnclosure } from '../shape';
 import { InequalBoundaryException } from '../shape-exception';
 
 @Component({
     moduleId: module.id,
-    selector: 'circle',
+    selector: 'circle-component',
     templateUrl: 'circle.component.html',
     styleUrls: ['circle.component.scss']
 })
 
 
-export class CircleComponent implements Shape {
+export class CircleComponent implements OnInit {
 
-    public area: number = 0;
+    @Input() enclosure: ShapeEnclosure;
+
+    area: number;
     public radius: number;
 
-    constructor(private enclosure: ShapeEnclosure) {
+    constructor() {
+    }
+
+    ngOnInit() {
         this.calculateArea();
     }
 
     private calculateArea() {
+
         if (this.enclosure.length !== this.enclosure.breadth) {
             throw new InequalBoundaryException(this.enclosure);
         }

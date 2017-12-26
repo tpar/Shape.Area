@@ -1,10 +1,8 @@
 
-
 export interface Shape {
     area: number;
 }
 
-export interface ShapeEnclosure {
-    length: number;
-    breadth: number;
+export class ShapeEnclosure {
+    constructor (public length, public breadth) {};
 }
