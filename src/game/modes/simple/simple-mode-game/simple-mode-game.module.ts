@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { SimpleModeGameComponent } from './simple-mode-game.component';
 
 import {CircleComponent} from '../../../../shapes/circle/circle.component';
+import { TriangleComponent } from '../../../../shapes/triangle/triangle.component';
 
 
 @NgModule({
@@ -15,6 +16,10 @@ import {CircleComponent} from '../../../../shapes/circle/circle.component';
     ],
     exports: [
         SimpleModeGameComponent,
+    ],
+    entryComponents: [
+        CircleComponent,
+        TriangleComponent
     ],
     bootstrap:[SimpleModeGameComponent]
 })

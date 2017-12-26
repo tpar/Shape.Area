@@ -21,6 +21,10 @@ import { ShapeFactoryService } from '../shapes/factory/shape-factory';
   providers: [
     ShapeFactoryService
   ],
+  entryComponents: [
+    CircleComponent,
+    TriangleComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

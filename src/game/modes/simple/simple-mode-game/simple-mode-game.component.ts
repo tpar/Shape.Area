@@ -1,5 +1,5 @@
 import { Component, ViewContainerRef } from '@angular/core';
-import { ShapeEnclosure } from '../../../../shapes/shape';
+import { ShapeEnclosure, ShapeType } from '../../../../shapes/shape';
 import { ShapeFactoryService } from '../../../../shapes/factory/shape-factory';
 
 @Component({
@@ -13,7 +13,9 @@ export class SimpleModeGameComponent {
     ecl: ShapeEnclosure = new ShapeEnclosure(25, 25);
 
     constructor (service: ShapeFactoryService, viewContainerRef: ViewContainerRef) {
-        // service.setRootViewContainerRef(viewContainerRef);
-        // service.addDynamicComponent();
+        
+        service.setRootViewContainerRef(viewContainerRef);
+
+        service.addShape(ShapeType.Triangle);
     }
 }
