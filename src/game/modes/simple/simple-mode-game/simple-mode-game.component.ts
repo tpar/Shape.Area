@@ -8,5 +8,5 @@ import { ShapeEnclosure } from '../../../../shapes/shape';
     styleUrls: ['simple-mode-game.component.scss']
 })
 export class SimpleModeGameComponent {
-    ecl: ShapeEnclosure = new ShapeEnclosure(5, 5);
+    ecl: ShapeEnclosure = new ShapeEnclosure(25, 25);
 }

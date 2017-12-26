@@ -1,5 +1,12 @@
 <!--component html goes here -->
 
 <div class="circle-wrapper">
-    Circle goes here - WIP {{ area }}
+        
+    <svg height="100" width="100">
+        <circle cx="50" cy="50" [attr.r]="radius" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+    
+    <p>radius: {{ radius }}</p>
+    <p>area: {{ area }}</p>
+
 </div>

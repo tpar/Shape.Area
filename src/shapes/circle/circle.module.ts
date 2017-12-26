@@ -5,15 +5,15 @@ import { NgModule } from '@angular/core';
 import { CircleComponent } from './circle.component';
 
 @NgModule({
-    imports: [
+	imports: [
 
-    ],
-    declarations: [
-        CircleComponent,
-    ],
-    exports: [
-        CircleComponent,
-    ]
+	],
+	declarations: [
+		CircleComponent,
+	],
+	exports: [
+		CircleComponent,
+	]
 })
 export class CircleModule {
 

@@ -15,10 +15,22 @@ export class CircleComponent implements OnInit, Shape {
     @Input() enclosure: ShapeEnclosure;
 
     area: number;
-    public radius: number;
+    radius: number;
+
+    rad1: "5";
+    rad2=5;
 
     ngOnInit() {
+       this.init(); 
+    }
+
+    private init() {
+        this.setRadius();
         this.calculateArea();
+    }
+
+    private setRadius() {
+        this.radius = 0.5 * this.enclosure.length;
     }
 
     private calculateArea() {
@@ -26,8 +38,6 @@ export class CircleComponent implements OnInit, Shape {
         if (this.enclosure.length !== this.enclosure.breadth) {
             throw new InequalBoundaryException(this.enclosure);
         }
-
-        this.radius = 0.5 * this.enclosure.length;
 
         this.area = Math.PI * Math.pow(this.radius, 2);
     }
