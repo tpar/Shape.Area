@@ -10,15 +10,12 @@ import { InequalBoundaryException } from '../shape-exception';
 })
 
 
-export class CircleComponent implements OnInit {
+export class CircleComponent implements OnInit, Shape {
 
     @Input() enclosure: ShapeEnclosure;
 
     area: number;
     public radius: number;
-
-    constructor() {
-    }
 
     ngOnInit() {
         this.calculateArea();

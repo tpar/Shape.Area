@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShapeEnclosure } from '../../../../shapes/shape';
 
 @Component({
     moduleId: module.id,
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
     styleUrls: ['simple-mode-game.component.scss']
 })
 export class SimpleModeGameComponent {
-
+    ecl: ShapeEnclosure = new ShapeEnclosure(5, 5);
 }
