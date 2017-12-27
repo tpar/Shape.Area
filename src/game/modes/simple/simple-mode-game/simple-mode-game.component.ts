@@ -10,12 +10,8 @@ import { ShapeFactoryService } from '../../../../shapes/factory/shape-factory';
 })
 
 export class SimpleModeGameComponent {
-    ecl: ShapeEnclosure = new ShapeEnclosure(25, 25);
 
-    constructor (service: ShapeFactoryService, viewContainerRef: ViewContainerRef) {
+    constructor () {
         
-        service.setRootViewContainerRef(viewContainerRef);
-
-        service.addShape(ShapeType.Triangle);
     }
 }
