@@ -1,4 +1,4 @@
-import { Component, ViewContainerRef } from '@angular/core';
+import { Component, ViewContainerRef, Input } from '@angular/core';
 import { ShapeEnclosure, ShapeType } from '../../../shapes/shape';
 import { ShapeFactoryService } from '../../../shapes/factory/shape-factory';
 
@@ -9,10 +9,12 @@ import { ShapeFactoryService } from '../../../shapes/factory/shape-factory';
     styleUrls: ['random-shape-simple.component.scss']
 })
 export class RandomShapeSimpleComponent {
-    
-    constructor (service: ShapeFactoryService, viewContainerRef: ViewContainerRef) {
+
+    @Input() enclosure: ShapeEnclosure;
+
+    constructor(service: ShapeFactoryService, viewContainerRef: ViewContainerRef) {
         service.setRootViewContainerRef(viewContainerRef);
-        service.addShape(this.getRandomShapeType());
+        service.addShape(this.getRandomShapeType(), this.enclosure);
     }
 
     private getRandomShapeType(): ShapeType {
@@ -21,9 +23,9 @@ export class RandomShapeSimpleComponent {
             .filter(n => !Number.isNaN(n));
 
         const randomIndex = this.getRandomInt(0, enumValues.length)
-        
-        return enumValues[randomIndex]
-            
+
+        return enumValues[randomIndex];
+
     }
 
     private getRandomInt(min, max) {

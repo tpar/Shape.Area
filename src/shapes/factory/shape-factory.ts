@@ -22,12 +22,10 @@ export class ShapeFactoryService {
 		this.rootViewContainer = viewContainerRef;
 	}
 
-	public addShape(shape: ShapeType) {
+	public addShape(shape: ShapeType, enclosure: ShapeEnclosure) {
 		const factory = this.getComponentFactoryFor(shape);
 
 		let component = factory.create(this.rootViewContainer.parentInjector);
-
-		let enclosure = new ShapeEnclosure(50, 50);
 
 		component.instance.enclosure = enclosure;
 

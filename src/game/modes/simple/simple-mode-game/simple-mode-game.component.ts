@@ -1,6 +1,5 @@
-import { Component, ViewContainerRef } from '@angular/core';
+import { Component, ViewContainerRef, OnInit } from '@angular/core';
 import { ShapeEnclosure, ShapeType } from '../../../../shapes/shape';
-import { ShapeFactoryService } from '../../../../shapes/factory/shape-factory';
 
 @Component({
     moduleId: module.id,
@@ -9,9 +8,10 @@ import { ShapeFactoryService } from '../../../../shapes/factory/shape-factory';
     styleUrls: ['simple-mode-game.component.scss']
 })
 
-export class SimpleModeGameComponent {
+export class SimpleModeGameComponent implements OnInit {
 
-    constructor () {
-        
+    enclosure: ShapeEnclosure = new ShapeEnclosure(50, 50);
+
+    ngOnInit() {
     }
 }
